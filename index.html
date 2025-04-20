@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UFC Info Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .card-body { text-align: center; }
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">🥊 UFC Info Hub</h1>
+
+    <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="fighter-stats-tab" data-bs-toggle="tab" href="#fighter-stats" role="tab">Fighter Stats</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="upcoming-events-tab" data-bs-toggle="tab" href="#upcoming-events" role="tab">Upcoming Events</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="weight-classes-tab" data-bs-toggle="tab" href="#weight-classes" role="tab">Weight Classes</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="belt-tracker-tab" data-bs-toggle="tab" href="#belt-tracker" role="tab">Belt Tracker</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="fighter-stats" role="tabpanel">
+        <form id="fighterForm" class="text-center mb-4">
+          <input type="text" id="fighterInput" class="form-control mb-2" placeholder="Enter fighter name" required />
+          <button type="submit" class="btn btn-danger">Search Fighter</button>
+        </form>
+        <div id="fighterOutput"></div>
+      </div>
+
+      <div class="tab-pane fade" id="upcoming-events" role="tabpanel">
+        <button class="btn btn-primary" id="loadEvents">Load Upcoming Events</button>
+        <div id="eventsList"></div>
+      </div>
+
+      <div class="tab-pane fade" id="weight-classes" role="tabpanel">
+        <button class="btn btn-warning" id="loadWeightClasses">Load Weight Classes</button>
+        <div id="weightClassList"></div>
+      </div>
+
+      <div class="tab-pane fade" id="belt-tracker" role="tabpanel">
+        <button class="btn btn-success" id="loadBeltTracker">Load Current Champs</button>
+        <div id="beltTrackerList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
